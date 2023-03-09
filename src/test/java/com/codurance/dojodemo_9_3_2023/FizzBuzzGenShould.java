@@ -33,4 +33,14 @@ public class FizzBuzzGenShould {
 
         assertEquals("Fizz", result);
     }
+
+    @Test
+    void returnBuzzIfInputDivisibleByFive() {
+        FizzBuzzGen gen = new FizzBuzzGen();
+
+        String result = gen.generate(5);
+
+        assertEquals("Buzz", result);
+
+    }
 }
