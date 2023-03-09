@@ -1,14 +1,21 @@
 package com.codurance.dojodemo_9_3_2023;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzGenShould {
 
+    private FizzBuzzGen gen;
+
+    @BeforeEach
+    void setUp() {
+        gen = new FizzBuzzGen();
+    }
+
     @Test
     void returnOneIfOneIsTheInput() {
-        FizzBuzzGen gen = new FizzBuzzGen();
 
         String result = gen.generate(1);
 
@@ -17,7 +24,6 @@ public class FizzBuzzGenShould {
 
     @Test
     void returnTwoIfTwoIsInput() {
-        FizzBuzzGen gen = new FizzBuzzGen();
 
         String result = gen.generate(2);
 
@@ -27,7 +33,6 @@ public class FizzBuzzGenShould {
     @Test
     void returnFizzIfInputDivisibleByThree() {
 
-        FizzBuzzGen gen = new FizzBuzzGen();
 
         String result = gen.generate(3);
 
@@ -36,11 +41,12 @@ public class FizzBuzzGenShould {
 
     @Test
     void returnBuzzIfInputDivisibleByFive() {
-        FizzBuzzGen gen = new FizzBuzzGen();
 
         String result = gen.generate(5);
 
         assertEquals("Buzz", result);
 
     }
+
+
 }
