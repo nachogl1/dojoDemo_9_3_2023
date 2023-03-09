@@ -48,5 +48,9 @@ public class FizzBuzzGenShould {
 
     }
 
-
+    @Test
+    void returnFizzBuzzIfInputDivisibleByFiveAndThree(){
+        String result = gen.generate(15);
+        assertEquals("FizzBuzz", result);
+    }
 }
