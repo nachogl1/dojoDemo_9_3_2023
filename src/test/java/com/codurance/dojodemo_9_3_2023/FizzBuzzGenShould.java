@@ -7,11 +7,30 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FizzBuzzGenShould {
 
     @Test
-    void fizzBuzzGenInputOneThenReturnOne() {
+    void returnOneIfOneIsTheInput() {
         FizzBuzzGen gen = new FizzBuzzGen();
 
         String result = gen.generate(1);
 
         assertEquals("1", result);
+    }
+
+    @Test
+    void returnTwoIfTwoIsInput() {
+        FizzBuzzGen gen = new FizzBuzzGen();
+
+        String result = gen.generate(2);
+
+        assertEquals("2", result);
+    }
+
+    @Test
+    void returnFizzIfInputDivisibleByThree() {
+
+        FizzBuzzGen gen = new FizzBuzzGen();
+
+        String result = gen.generate(3);
+
+        assertEquals("Fizz", result);
     }
 }
